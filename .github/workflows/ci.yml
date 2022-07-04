@@ -30,11 +30,11 @@ jobs:
         id: cache-npm-packages
         with:
           path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install NPM dependencies
         if: steps.cache-npm-packages.outputs.cache-hit != 'true'
-        run: npm ci
+        run: yarn
 
       - name: Cache build frontend
         uses: actions/cache@v2
@@ -44,7 +44,7 @@ jobs:
           key: ${{ runner.os }}-frontend-${{ github.sha }}
 
       - name: Run build production application
-        run: npm run buildfrontend
+        run: yarn buildfrontend
 
       - name: Cache build backend
         uses: actions/cache@v2
@@ -54,7 +54,7 @@ jobs:
           key: ${{ runner.os }}-backend-${{ github.sha }}
 
       - name: Run build backend server
-        run: npm run buildbackend
+        run: yarn buildbackend
 
   deploy:
     runs-on: ubuntu-latest
