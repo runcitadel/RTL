@@ -1,7 +1,7 @@
 # ---------------
 # Install Dependencies
 # ---------------
-FROM node:16-alpine as builder
+FROM node:18-alpine as builder
 
 WORKDIR /RTL
 
@@ -29,7 +29,7 @@ RUN yarn install --production --ignore-scripts --prefer-offline
 # ---------------
 # Release App
 # ---------------
-FROM node:16-alpine as runner
+FROM node:18-alpine as runner
 
 WORKDIR /RTL
 
