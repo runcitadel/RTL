@@ -9,7 +9,7 @@ COPY package.json /RTL/package.json
 COPY yarn.lock /RTL/yarn.lock
 COPY .yarnrc.yml /RTL/.yarnrc.yml
 COPY .yarn/releases/yarn-3.2.1.cjs /RTL/.yarn/releases/yarn-3.2.1.cjs
-COPY .yarn/plugins/plugin-workspace-tools.cjs /RTL/.yarn/plugins/plugin-workspace-tools.cjs
+COPY .yarn/plugins/@yarnpkg/plugin-workspace-tools.cjs /RTL/.yarn/plugins/@yarnpkg/plugin-workspace-tools.cjs
 
 RUN yarn
 
