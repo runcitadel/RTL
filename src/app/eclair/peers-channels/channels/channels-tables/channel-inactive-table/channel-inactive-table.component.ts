@@ -33,7 +33,7 @@ export class ECLChannelInactiveTableComponent implements OnInit, AfterViewInit, 
   @ViewChild(MatSort, { static: false }) sort: MatSort | undefined;
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator | undefined;
   public faEye = faEye;
-  public faEyeSlash = faEyeSlash
+  public faEyeSlash = faEyeSlash;
   public inactiveChannels: Channel[];
   public totalBalance = 0;
   public displayedColumns: any[] = [];

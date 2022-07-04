@@ -58,7 +58,7 @@ export class ChannelOpenTableComponent implements OnInit, AfterViewInit, OnDestr
   public screenSizeEnum = ScreenSizeEnum;
   public versionsArr = [];
   public faEye = faEye;
-  public faEyeSlash = faEyeSlash
+  public faEyeSlash = faEyeSlash;
   private targetConf = 6;
   public errorMessage = '';
   public apiCallStatus: ApiCallStatusPayload = null;

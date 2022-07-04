@@ -34,7 +34,7 @@ export class ECLChannelOpenTableComponent implements OnInit, AfterViewInit, OnDe
   @ViewChild(MatSort, { static: false }) sort: MatSort | undefined;
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator | undefined;
   public faEye = faEye;
-  public faEyeSlash = faEyeSlash
+  public faEyeSlash = faEyeSlash;
   public activeChannels: Channel[];
   public totalBalance = 0;
   public displayedColumns: any[] = [];
