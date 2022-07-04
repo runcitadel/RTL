@@ -6,9 +6,9 @@ FROM node:16-alpine as builder
 WORKDIR /RTL
 
 COPY package.json /RTL/package.json
-COPY package-lock.json /RTL/package-lock.json
+COPY yarn.lock /RTL/yarn.lock
 
-RUN npm install
+RUN yarn
 
 # ---------------
 # Build App
@@ -16,13 +16,13 @@ RUN npm install
 COPY . .
 
 # Build the Angular application
-RUN npm run buildfrontend
+RUN yarn buildfrontend
 
 # Build the Backend from typescript server
-RUN npm run buildbackend
+RUN yarn buildbackend
 
 # Remove non production necessary modules
-RUN npm prune --production
+RUN yarn install --production --ignore-scripts --prefer-offline
 
 # ---------------
 # Release App
