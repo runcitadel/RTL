@@ -29,7 +29,7 @@ const onError = (error) => {
       process.exit(1);
       break;
     default:
-      logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'DEFUALT ERROR', error: error.code });
+      logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'DEFAULT ERROR', error: error.code });
       throw error;
   }
 };
