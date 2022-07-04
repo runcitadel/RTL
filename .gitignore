@@ -63,3 +63,11 @@ _config.yml
 RTL-Config-Docker.json
 dockerfiles/RTL-Config.json
 dockerfiles/.env
+
+# Yarn v2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

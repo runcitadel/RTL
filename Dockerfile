@@ -7,6 +7,8 @@ WORKDIR /RTL
 
 COPY package.json /RTL/package.json
 COPY yarn.lock /RTL/yarn.lock
+COPY .yarnrc.yml /RTL/.yarnrc.yml
+COPY .yarn/releases/yarn-3.2.1.cjs /RTL/.yarn/releases/yarn-3.2.1.cjs
 
 RUN yarn
 
