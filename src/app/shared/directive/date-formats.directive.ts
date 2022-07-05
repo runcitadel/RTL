@@ -1,5 +1,5 @@
 import { Directive, Injectable } from '@angular/core';
-import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter, MatDateFormats } from '@angular/material/core';
+import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter, MatDateFormats } from '@angular/material-experimental/mdc-core';
 import { MONTHS } from '../services/consts-enums-functions';
 
 @Injectable() class CustomDateAdapter extends NativeDateAdapter {

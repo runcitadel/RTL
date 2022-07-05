@@ -5,8 +5,8 @@ import { filter, take, takeUntil } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import { Actions } from '@ngrx/effects';
 import { faCopy, faInfoCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material-experimental/mdc-dialog';
+import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
 
 import { Channel } from '../../../../shared/models/clnModels';
 import { CLNChannelInformation } from '../../../../shared/models/alertData';

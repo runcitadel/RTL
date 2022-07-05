@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy, ViewChild, Inject } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material-experimental/mdc-dialog';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
 
 import { UTXO } from '../../../shared/models/lndModels';
 import { OnChainLabelUTXO } from '../../../shared/models/alertData';

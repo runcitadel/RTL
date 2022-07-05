@@ -2,9 +2,9 @@ import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from '@angular
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
-import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material-experimental/mdc-paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
 
 import { ChannelInformationComponent } from '../../channel-information-modal/channel-information.component';
 import { Channel, ChannelHTLC, ChannelsSummary, LightningBalance } from '../../../../../shared/models/lndModels';

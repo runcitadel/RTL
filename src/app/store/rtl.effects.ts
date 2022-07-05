@@ -6,8 +6,8 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of, Subject, forkJoin, Observable } from 'rxjs';
 import { map, mergeMap, catchError, take, withLatestFrom, takeUntil } from 'rxjs/operators';
 
-import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material-experimental/mdc-dialog';
+import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
 
 import { environment, API_URL } from '../../environments/environment';
 import { WebSocketClientService } from '../shared/services/web-socket.service';

@@ -4,7 +4,7 @@ import { TitleCasePipe } from '@angular/common';
 import { Subject, throwError, of, BehaviorSubject } from 'rxjs';
 import { map, takeUntil, catchError, mergeMap, withLatestFrom, first } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
 
 import { LoggerService } from '../../shared/services/logger.service';
 import { environment, API_URL } from '../../../environments/environment';

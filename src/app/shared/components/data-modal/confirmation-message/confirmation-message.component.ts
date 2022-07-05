@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material-experimental/mdc-dialog';
 import { Store } from '@ngrx/store';
 import { faInfoCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 

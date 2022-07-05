@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material-experimental/mdc-dialog';
 import { faUserClock } from '@fortawesome/free-solid-svg-icons';
 
 import { RTLState } from '../../../../store/rtl.state';

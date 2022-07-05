@@ -1,4 +1,5 @@
-@use '@angular/material' as mat;
+@use '@angular/material' as mat-stable;
+@use '@angular/material-experimental' as mat;
 @import './color-swatches/light-dull-theme.scss';
 @import './color-swatches/dark-bright-theme.scss';
 @import './color-swatches/purple-primary.swatch.scss';
@@ -6,12 +7,12 @@
 @import './color-swatches/white.swatch.scss';
 @import '@angular/material/theming';
 
-$purple-primary: mat.define-palette($purple-primary, 500, 300, A200);
-$purple-accent: mat.define-palette(mat.$gray-palette, 800, 600, 900);
-$purple-accent-night: mat.define-palette($mat-white, 300, 600, 900);
-$purple-warn: mat.define-palette($red-warn, 500);
-$purple-warn-night: mat.define-palette($red-warn, A700);
+$purple-primary: mat-stable.define-palette($purple-primary, 500, 300, A200);
+$purple-accent: mat-stable.define-palette(mat-stable.$gray-palette, 800, 600, 900);
+$purple-accent-night: mat-stable.define-palette($mat-white, 300, 600, 900);
+$purple-warn: mat-stable.define-palette($red-warn, 500);
+$purple-warn-night: mat-stable.define-palette($red-warn, A700);
 
 $purple-night-theme: create-dark-bright-theme($purple-primary, $purple-accent-night, $purple-warn-night);
 
-$purple-day-theme: mat.define-light-theme($purple-primary, $purple-accent, $purple-warn);
+$purple-day-theme: mat-stable.define-light-theme($purple-primary, $purple-accent, $purple-warn);

@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import { Actions } from '@ngrx/effects';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material-experimental/mdc-dialog';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 import { CLNOfferInformation } from '../../../../shared/models/alertData';

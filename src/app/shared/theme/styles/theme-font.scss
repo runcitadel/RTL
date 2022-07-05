@@ -1,4 +1,5 @@
-@use '@angular/material' as mat;
+@use '@angular/material' as mat-stable;
+@use '@angular/material-experimental' as mat;
 @use 'sass:math' as math;
 @import 'constants';
 
@@ -246,7 +247,7 @@
   }
 
   .mat-flat-button.mat-primary:focus, .mat-flat-button.mat-primary:hover {
-    @include mat.elevation(2);
+    @include mat-stable.elevation(2);
   }
 
   .mat-flat-button.mat-primary:disabled {

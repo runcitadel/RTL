@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
 import { faRoute, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 import { Routes } from '../../../shared/models/clnModels';
