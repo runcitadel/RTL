@@ -109,15 +109,15 @@ export class ConfigService {
         };
         this.validateNodeConfig = (config) => {
             if ((+process.env.RTL_SSO === 0) || (typeof process.env.RTL_SSO === 'undefined' && +config.SSO.rtlSSO === 0)) {
-                if (process.env.APP_PASSWORD && process.env.APP_PASSWORD.trim() !== '') {
-                    this.common.rtl_pass = this.hash.update(process.env.APP_PASSWORD).digest('hex');
-                    this.common.flg_allow_password_update = false;
-                }
-                else if (config.multiPassHashed && config.multiPassHashed !== '') {
+                if (config.multiPassHashed && config.multiPassHashed !== '') {
                     this.common.rtl_pass = config.multiPassHashed;
                 }
                 else if (config.multiPass && config.multiPass !== '') {
                     this.common.rtl_pass = this.common.replacePasswordWithHash(this.hash.update(config.multiPass).digest('hex'));
+                }
+                else if (process.env.APP_PASSWORD && process.env.APP_PASSWORD.trim() !== '') {
+                    this.common.rtl_pass = this.hash.update(process.env.APP_PASSWORD).digest('hex');
+                    this.common.flg_allow_password_update = false;
                 }
                 else {
                     this.errMsg = this.errMsg + '\nNode Authentication can be set with multiPass only. Please set multiPass in RTL-Config.json';
