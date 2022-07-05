@@ -2,9 +2,9 @@ import { Component, ViewChild, Input, AfterViewInit, OnChanges, SimpleChanges, O
 import { DatePipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 
-import { MatPaginator, MatPaginatorIntl } from '@angular/material-experimental/mdc-paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { PAGE_SIZE, PAGE_SIZE_OPTIONS, getPaginatorLabel, AlertTypeEnum, DataTypeEnum, ScreenSizeEnum, SCROLL_RANGES } from '../../services/consts-enums-functions';
 import { CommonService } from '../../services/common.service';
 

@@ -1,5 +1,4 @@
-@use '@angular/material' as mat-stable;
-@use '@angular/material-experimental' as mat;
+@use '@angular/material' as mat;
 $dark-grey: (
   50 : #484848,
   100 : #464646,
@@ -63,7 +62,7 @@ $dark-bright-background: (
   lightest-background: map_get($dark-grey, 50),
 );
 
-@function create-dark-bright-theme($primary, $accent, $warn: mat-stable.define-palette(mat.$red-palette)) {
+@function create-dark-bright-theme($primary, $accent, $warn: mat.define-palette(mat.$red-palette)) {
   @return (
     primary: $primary,
     accent: $accent,

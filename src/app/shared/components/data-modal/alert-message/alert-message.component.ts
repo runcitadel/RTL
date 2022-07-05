@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewChecked, Inject, ViewChild, ElementRef, OnDestroy, Renderer2 } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material-experimental/mdc-dialog';
-import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { CommonService } from '../../../services/common.service';
 import { LoggerService } from '../../../services/logger.service';

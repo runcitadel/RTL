@@ -1,4 +1,4 @@
-import { MatPaginatorIntl } from '@angular/material-experimental/mdc-paginator';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 export function getPaginatorLabel(field: string) {
   const appPaginator = new MatPaginatorIntl();

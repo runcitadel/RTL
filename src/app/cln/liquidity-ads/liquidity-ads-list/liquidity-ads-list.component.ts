@@ -2,9 +2,9 @@ import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Subject, combineLatest } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
-import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-import { MatPaginator, MatPaginatorIntl } from '@angular/material-experimental/mdc-paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { faBullhorn, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 import { DataService } from '../../../shared/services/data.service';

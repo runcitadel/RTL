@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material-experimental/mdc-dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { faReceipt } from '@fortawesome/free-solid-svg-icons';
-import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { LoggerService } from '../../../../shared/services/logger.service';
 import { CommonService } from '../../../../shared/services/common.service';

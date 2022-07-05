@@ -1,5 +1,4 @@
-@use '@angular/material' as mat-stable;
-@use '@angular/material-experimental' as mat;
+@use '@angular/material' as mat;
 @import './color-swatches/light-dull-theme.scss';
 @import './color-swatches/dark-bright-theme.scss';
 @import './color-swatches/red-warn.swatch.scss';
@@ -7,12 +6,12 @@
 @import './color-swatches/white.swatch.scss';
 @import '@angular/material/theming';
 
-$green-primary: mat-stable.define-palette($green-primary, 500, 300, A200);
-$green-accent:  mat-stable.define-palette(mat-stable.$gray-palette, 800, 600, 900);
-$green-accent-night:  mat-stable.define-palette($mat-white, 300, 600, 900);
-$green-warn: mat-stable.define-palette($red-warn, 500);
-$green-warn-night: mat-stable.define-palette($red-warn, A700);
+$green-primary: mat.define-palette($green-primary, 500, 300, A200);
+$green-accent:  mat.define-palette(mat.$gray-palette, 800, 600, 900);
+$green-accent-night:  mat.define-palette($mat-white, 300, 600, 900);
+$green-warn: mat.define-palette($red-warn, 500);
+$green-warn-night: mat.define-palette($red-warn, A700);
 
 $green-night-theme: create-dark-bright-theme($green-primary, $green-accent-night, $green-warn-night);
 
-$green-day-theme: mat-stable.define-light-theme($green-primary, $green-accent, $green-warn);
+$green-day-theme: mat.define-light-theme($green-primary, $green-accent, $green-warn);

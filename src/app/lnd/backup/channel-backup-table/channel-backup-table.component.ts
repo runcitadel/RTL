@@ -6,9 +6,9 @@ import { Actions } from '@ngrx/effects';
 import { faInfoCircle, faExclamationTriangle, faArchive } from '@fortawesome/free-solid-svg-icons';
 
 import { ChannelInformationComponent } from '../../peers-channels/channels/channel-information-modal/channel-information.component';
-import { MatPaginator, MatPaginatorIntl } from '@angular/material-experimental/mdc-paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { SelNodeChild } from '../../../shared/models/RTLconfig';
 import { Channel, ChannelsSummary, LightningBalance } from '../../../shared/models/lndModels';
 import { PAGE_SIZE, PAGE_SIZE_OPTIONS, getPaginatorLabel, ScreenSizeEnum, APICallStatusEnum, UI_MESSAGES, LNDActions, RTLActions } from '../../../shared/services/consts-enums-functions';

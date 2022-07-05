@@ -1,5 +1,4 @@
-@use '@angular/material' as mat-stable;
-@use '@angular/material-experimental' as mat;
+@use '@angular/material' as mat;
 
 $light-dull-foreground: (
   base:              black,
@@ -13,22 +12,22 @@ $light-dull-foreground: (
 );
 
 $light-dull-background: (
-  status-bar: map_get(mat-stable.$grey-palette, 300),
-  app-bar:    map_get(mat-stable.$grey-palette, 100),
-  background:map_get(mat-stable.$gray-palette, 100),
+  status-bar: map_get(mat.$grey-palette, 300),
+  app-bar:    map_get(mat.$grey-palette, 100),
+  background:map_get(mat.$gray-palette, 100),
   hover:      rgba(black, 0.04),
-  card:       map_get(mat-stable.$gray-palette, 100),
-  dialog:     map_get(mat-stable.$gray-palette, 100),
+  card:       map_get(mat.$gray-palette, 100),
+  dialog:     map_get(mat.$gray-palette, 100),
   disabled-button: rgba(black, 0.12),
-  raised-button: map_get(mat-stable.$grey-palette, 50),
-  selected-button: map_get(mat-stable.$grey-palette, 300),
-  selected-disabled-button: map_get(mat-stable.$grey-palette, 400),
-  disabled-button-toggle: map_get(mat-stable.$grey-palette, 200),
-  unselected-chip: map_get(mat-stable.$grey-palette, 300),
-  disabled-list-option: map_get(mat-stable.$grey-palette, 200),
+  raised-button: map_get(mat.$grey-palette, 50),
+  selected-button: map_get(mat.$grey-palette, 300),
+  selected-disabled-button: map_get(mat.$grey-palette, 400),
+  disabled-button-toggle: map_get(mat.$grey-palette, 200),
+  unselected-chip: map_get(mat.$grey-palette, 300),
+  disabled-list-option: map_get(mat.$grey-palette, 200),
 );
 
-@function create-light-dull-theme($primary, $accent, $warn: mat-stable.define-palette(mat.$red-palette)) {
+@function create-light-dull-theme($primary, $accent, $warn: mat.define-palette(mat.$red-palette)) {
   @return (
     primary: $primary,
     accent: $accent,

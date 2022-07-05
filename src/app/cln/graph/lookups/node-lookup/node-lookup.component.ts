@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { LookupNode } from '../../../../shared/models/clnModels';
 import { NODE_FEATURES_CLN } from '../../../../shared/services/consts-enums-functions';

@@ -1,24 +1,23 @@
-@use '@angular/material' as mat-stable;
-@use '@angular/material-experimental' as mat;
+@use '@angular/material' as mat;
 @import "constants";
 
 @mixin theme-mode-dark($theme) {
   $primary: map-get($theme, primary);
-  $primary-color: mat-stable.get-color-from-palette($primary);
-  $primary-lighter: mat-stable.get-color-from-palette($primary, lighter);
-  $primary-darker: mat-stable.get-color-from-palette($primary, darker);
+  $primary-color: mat.get-color-from-palette($primary);
+  $primary-lighter: mat.get-color-from-palette($primary, lighter);
+  $primary-darker: mat.get-color-from-palette($primary, darker);
   $accent: map-get($theme, accent);
-  $accent-color: mat-stable.get-color-from-palette($accent);
+  $accent-color: mat.get-color-from-palette($accent);
   $warn: map-get($theme, warn);
-  $warn-color: mat-stable.get-color-from-palette($warn);
+  $warn-color: mat.get-color-from-palette($warn);
   $foreground: map-get($theme, foreground);
-  $foreground-base: mat-stable.get-color-from-palette($foreground, base); // 1
-  $foreground-text: mat-stable.get-color-from-palette($foreground, text); //.87
-  $foreground-secondary-text: mat-stable.get-color-from-palette($foreground, secondary-text); // .54
-  $foreground-disabled: mat-stable.get-color-from-palette($foreground, disabled); // .38
-  $foreground-divider: mat-stable.get-color-from-palette($foreground, divider); // .12
+  $foreground-base: mat.get-color-from-palette($foreground, base); // 1
+  $foreground-text: mat.get-color-from-palette($foreground, text); //.87
+  $foreground-secondary-text: mat.get-color-from-palette($foreground, secondary-text); // .54
+  $foreground-disabled: mat.get-color-from-palette($foreground, disabled); // .38
+  $foreground-divider: mat.get-color-from-palette($foreground, divider); // .12
   $background: map-get($theme, background);
-  $background-color: mat-stable.get-color-from-palette($background, card);
+  $background-color: mat.get-color-from-palette($background, card);
   $hover-background: rgba(0, 0, 0, 0.04);
   $hover-background-dark: rgba(255, 255, 255, 0.06);
   $tooltip-background: rgba(255, 255, 255, 0.9);
@@ -44,7 +43,7 @@
       }          
     }
     & .tab-badge .mat-badge-content {
-      color: mat-stable.get-color-from-palette($background, dialog);
+      color: mat.get-color-from-palette($background, dialog);
       background: $foreground-secondary-text;
     }  
   }
@@ -118,7 +117,7 @@
     border-color: $primary-lighter;
   }
   .mat-progress-bar-fill::after {
-    background-color: mat-stable.get-color-from-palette($primary, 600);
+    background-color: mat.get-color-from-palette($primary, 600);
   }
   .chart-legend .legend-label:hover, .chart-legend .legend-label .active .legend-label-text {
     color: $foreground-text !important;
@@ -138,10 +137,10 @@
     color: $primary-darker;
   }
   .mat-select-panel {
-    background-color: mat-stable.get-color-from-palette($background, dialog);
+    background-color: mat.get-color-from-palette($background, dialog);
   }  
   .mat-tree {
-    background: mat-stable.get-color-from-palette($background, dialog);
+    background: mat.get-color-from-palette($background, dialog);
   }
   .mat-tab-label, .mat-tab-link {
     color:  $foreground-secondary-text;
@@ -162,10 +161,10 @@
     color: $foreground-text;
   }
   .mat-progress-bar.this-channel-bar .mat-progress-bar-fill::after {
-    background-color: mat-stable.get-color-from-palette($accent, A200);
+    background-color: mat.get-color-from-palette($accent, A200);
   }
   .mat-progress-bar.this-channel-bar .mat-progress-bar-buffer {
-    background-color: mat-stable.get-color-from-palette($accent, 400);
+    background-color: mat.get-color-from-palette($accent, 400);
   }
   .color-primary {
     color:  $primary-darker !important;
@@ -177,7 +176,7 @@
     background-color:  $primary-color !important;
   }
   .mat-stepper-vertical {
-    background-color: mat-stable.get-color-from-palette($background, dialog);
+    background-color: mat.get-color-from-palette($background, dialog);
   }
   svg {
     & .boltz-icon { stroke:#FFFFFF; stroke-width:4; }
@@ -249,7 +248,7 @@
   }
 
   .mat-slide-toggle-bar, .mat-step-header .mat-step-icon:not(.mat-step-icon-selected) {
-    background-color: mat-stable.get-color-from-palette($background, lightest-background);
+    background-color: mat.get-color-from-palette($background, lightest-background);
   }
 
   .mat-slide-toggle.mat-disabled {
@@ -293,7 +292,7 @@
     }
     &.two-color {
       & .ngx-charts .chart.bar-chart g g:nth-child(2n+1) path {
-        fill: mat-stable.get-color-from-palette($primary, 800);
+        fill: mat.get-color-from-palette($primary, 800);
       }
       & .ngx-charts .chart.bar-chart g g:nth-child(2n+2) path {
         fill: $primary-darker;

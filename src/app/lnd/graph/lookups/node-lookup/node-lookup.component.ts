@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { GraphNode } from '../../../../shared/models/lndModels';
 import { NodeFeaturesLND } from '../../../../shared/services/consts-enums-functions';

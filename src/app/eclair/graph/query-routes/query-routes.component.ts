@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import { faRoute, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { MatTableDataSource } from '@angular/material-experimental/mdc-table';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { AlertTypeEnum, DataTypeEnum, ScreenSizeEnum } from '../../../shared/services/consts-enums-functions';
 import { QueryRoutes, RouteNode } from '../../../shared/models/eclModels';

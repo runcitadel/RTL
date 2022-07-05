@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { of, throwError } from 'rxjs';
 import { DataService } from './data.service';
 import { LoggerService } from './logger.service';
-import { MatSnackBar } from '@angular/material-experimental/mdc-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { mockResponseData } from '../test-helpers/test-data';
 import { RTLState } from '../../store/rtl.state';
 

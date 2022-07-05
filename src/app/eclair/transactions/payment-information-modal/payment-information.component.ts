@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material-experimental/mdc-dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { PaymentSent } from '../../../shared/models/eclModels';
 import { ECLPaymentInformation } from '../../../shared/models/alertData';
