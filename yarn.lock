@@ -9989,15 +9989,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pdfmake@npm:^0.2.5":
-  version: 0.2.5
-  resolution: "pdfmake@npm:0.2.5"
+"pdfmake@npm:^0.3.0-beta.2":
+  version: 0.3.0-beta.2
+  resolution: "pdfmake@npm:0.3.0-beta.2"
   dependencies:
     "@foliojs-fork/linebreak": ^1.1.1
     "@foliojs-fork/pdfkit": ^0.13.0
     iconv-lite: ^0.6.3
     xmldoc: ^1.1.2
-  checksum: c13d9c336c529f96b056e00b877978cbe2eb2d59eb3b66bdb509af1e3c9f063f5bc7ffcf4fad684c7cca6439e694701caa8278ae93a913382711e7354e6375a4
+  checksum: 58ad2341ec52cf70989891f209be9db1888e66febfacaf7123e56c7c537803a1a772f9390c25f505b740a7e45e863b8c4a4c88606a668166545c11dc6944ab87
   languageName: node
   linkType: hard
 
@@ -11353,7 +11353,7 @@ __metadata:
     ngx-perfect-scrollbar: ^10.1.1
     nodemon: ~2.0.18
     otplib: ^12.0.1
-    pdfmake: ^0.2.5
+    pdfmake: ^0.3.0-beta.2
     protractor: ~7.0.0
     request: ^2.88.2
     request-promise: ^4.2.6
