@@ -15,19 +15,15 @@ const onError = (error) => {
     case 'EACCES':
       logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'http://' + (common.host ? common.host : 'localhost') + ':' + common.port + ' requires elevated privileges' });
       process.exit(1);
-      break;
     case 'EADDRINUSE':
       logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'http://' + (common.host ? common.host : 'localhost') + ':' + common.port + ' is already in use' });
       process.exit(1);
-      break;
     case 'ECONNREFUSED':
       logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'Server is down/locked' });
       process.exit(1);
-      break;
     case 'EBADCSRFTOKEN':
       logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'Form tempered' });
       process.exit(1);
-      break;
     default:
       logger.log({ level: 'ERROR', fileName: 'RTL', msg: 'DEFAULT ERROR', error: error.code });
       throw error;
