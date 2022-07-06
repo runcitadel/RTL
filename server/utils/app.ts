@@ -32,9 +32,10 @@ export class ExpressApplication {
   public directoryName = dirname(fileURLToPath(import.meta.url));
 
   constructor() {
+    const enable_https = process.env.RTL_HTTPS_ONLY?.toString() === '1';
     this.logger.log({ selectedNode: this.common.initSelectedNode, level: 'INFO', fileName: 'App', msg: 'Starting Express Application..' });
     this.app.set('trust proxy', true);
-    this.app.use(sessions({ secret: this.common.secret_key, saveUninitialized: true, cookie: { secure: false, maxAge: ONE_DAY }, resave: false }));
+    this.app.use(sessions({ secret: this.common.secret_key, saveUninitialized: true, cookie: { secure: enable_https, maxAge: ONE_DAY }, resave: false }));
     this.app.use(cookieParser(this.common.secret_key));
     this.app.use(bodyParser.json({ limit: '25mb' }));
     this.app.use(bodyParser.urlencoded({ extended: false, limit: '25mb' }));
@@ -49,11 +50,11 @@ export class ExpressApplication {
 
   public loadConfiguration = () => {
     this.config.setServerConfiguration();
-  };
+  }
 
-  public setCORS = () => { CORS.mount(this.app); };
+  public setCORS = () => { CORS.mount(this.app); }
 
-  public setCSRF = () => { CSRF.mount(this.app); };
+  public setCSRF = () => { CSRF.mount(this.app); }
 
   public setApplicationRoutes = () => {
     this.logger.log({ selectedNode: this.common.initSelectedNode, level: 'INFO', fileName: 'App', msg: 'Setting up Application Routes..' });
@@ -71,7 +72,7 @@ export class ExpressApplication {
     });
     this.app.use((err, req, res, next) => this.handleApplicationErrors(err, res));
     this.logger.log({ selectedNode: this.common.initSelectedNode, level: 'INFO', fileName: 'App', msg: 'Application Routes Set' });
-  };
+  }
 
   public handleApplicationErrors = (err, res) => {
     switch (err.code) {

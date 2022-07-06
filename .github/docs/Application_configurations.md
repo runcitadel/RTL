@@ -67,3 +67,4 @@ BITCOIND_CONFIG_PATH (Full path of the bitcoind.conf file including the file nam
 CHANNEL_BACKUP_PATH (Folder location for saving the channel backup files, valid for LND implementation only, Required if ln implementation=LND else Optional)<br />
 ENABLE_OFFERS (Boolean flag to enable the offers feature on core lighning, default false, optional)<br />
 LN_API_PASSWORD (Password for Eclair implementation if the eclair.conf path is not available, Required if ln implementation=ECL && config path is undefined)<br />
+RTL_HTTPS_ONLY (1 - RTL is only available vis HTTPS, enable additional security features, 0 - Also allow HTTP, Optional, default 0)<br />
