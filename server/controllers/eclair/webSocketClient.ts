@@ -23,7 +23,7 @@ export class ECLWebSocketClient {
     });
   }
 
-  public reconnet = (eclWsClt) => {
+  public reconnect = (eclWsClt) => {
     if (this.reconnectTimeOut) { return; }
     this.waitTime = (this.waitTime >= 64) ? 64 : (this.waitTime * 2);
     this.reconnectTimeOut = setTimeout(() => {
@@ -70,7 +70,7 @@ export class ECLWebSocketClient {
       if (eclWsClt && eclWsClt.selectedNode && eclWsClt.selectedNode.ln_implementation === 'ECL') {
         this.logger.log({ selectedNode: eclWsClt.selectedNode, level: 'INFO', fileName: 'ECLWebSocket', msg: 'Web socket disconnected, will reconnect again...' });
         eclWsClt.webSocketClient.close();
-        if (eclWsClt.reConnect) { this.reconnet(eclWsClt); }
+        if (eclWsClt.reConnect) { this.reconnect(eclWsClt); }
       }
     };
 
@@ -88,7 +88,7 @@ export class ECLWebSocketClient {
         const errStr = ((typeof err === 'object' && err.message) ? JSON.stringify({ error: err.message }) : (typeof err === 'object') ? JSON.stringify({ error: err }) : ('{ "error": ' + err + ' }'));
         this.wsServer.sendErrorToAllLNClients(errStr, eclWsClt.selectedNode);
         eclWsClt.webSocketClient.close();
-        if (eclWsClt.reConnect) { this.reconnet(eclWsClt); }
+        if (eclWsClt.reConnect) { this.reconnect(eclWsClt); }
       } else {
         eclWsClt.reConnect = false;
       }

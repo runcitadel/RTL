@@ -25,7 +25,7 @@ export class CLWebSocketClient {
     });
   }
 
-  public reconnet = (clWsClt) => {
+  public reconnect = (clWsClt) => {
     if (this.reconnectTimeOut) { return; }
     this.waitTime = (this.waitTime >= 64) ? 64 : (this.waitTime * 2);
     this.reconnectTimeOut = setTimeout(() => {
@@ -72,7 +72,7 @@ export class CLWebSocketClient {
       if (clWsClt && clWsClt.selectedNode && clWsClt.selectedNode.ln_implementation === 'CLN') {
         this.logger.log({ selectedNode: clWsClt.selectedNode, level: 'INFO', fileName: 'CLWebSocket', msg: 'Web socket disconnected, will reconnect again...' });
         clWsClt.webSocketClient.close();
-        if (clWsClt.reConnect) { this.reconnet(clWsClt); }
+        if (clWsClt.reConnect) { this.reconnect(clWsClt); }
       }
     };
 
@@ -90,7 +90,7 @@ export class CLWebSocketClient {
         const errStr = ((typeof err === 'object' && err.message) ? JSON.stringify({ error: err.message }) : (typeof err === 'object') ? JSON.stringify({ error: err }) : ('{ "error": ' + err + ' }'));
         this.wsServer.sendErrorToAllLNClients(errStr, clWsClt.selectedNode);
         clWsClt.webSocketClient.close();
-        if (clWsClt.reConnect) { this.reconnet(clWsClt); }
+        if (clWsClt.reConnect) { this.reconnect(clWsClt); }
       } else {
         clWsClt.reConnect = false;
       }
