@@ -17,7 +17,7 @@
     "testdev": "ng test --watch=true --code-coverage",
     "test": "ng test --watch=false",
     "lint": "ng lint",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc || true"
   },
   "private": true,
   "dependencies": {
