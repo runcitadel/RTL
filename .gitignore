@@ -41,6 +41,7 @@ channels-backup
 logs
 cookies
 frontend
+backend
 
 # System Files
 .DS_Store
