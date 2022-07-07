@@ -1,8 +1,9 @@
-RTL allows the user to configure and control specific application parameters for app customization and integration.<br />
-The parameters can be configured via RTL-Config.json file or through environment variables defined at the OS level. Required <br />
-parameters have `default` values for initial setup and can be updated after RTL server initial start.<br />
-<br />
-### RTL-Config.json<br />
+RTL allows the user to configure and control specific application parameters for app customization and integration.
+The parameters can be configured via RTL-Config.json file or through environment variables defined at the OS level. Required
+parameters have `default` values for initial setup and can be updated after RTL server initial start.
+
+### RTL-Config.json
+
 ```
 {
   "multiPass": "<The password in plain text, default 'password', Required>",
@@ -43,8 +44,8 @@ parameters have `default` values for initial setup and can be updated after RTL 
   ]
 }
 ```
-<br />
-### Environment variables<br />
+
+### Environment variables
 The environment variable can also be used for all of the above configurations except the UI settings.<br />
 If the environment variables are set, it will take precedence over the parameters in the RTL-Config.json file.<br />
 <br />
