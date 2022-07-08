@@ -1,8 +1,7 @@
 import { parse } from 'cookie';
 import * as cookieParser from 'cookie-parser';
 import * as crypto from 'crypto';
-import WebSocket from 'ws';
-import { Application } from 'express';
+import { WebSocketServer as _WebSocketServer } from 'ws';
 import { Logger, LoggerService } from './logger.js';
 import { Common, CommonService } from './common.js';
 import { verifyWSUser } from './authCheck.js';
@@ -34,7 +33,7 @@ export class WebSocketServer {
 
   public mount = (httpServer) => {
     this.logger.log({ selectedNode: this.common.initSelectedNode, level: 'INFO', fileName: 'WebSocketServer', msg: 'Connecting Websocket Server..' });
-    this.webSocketServer = new WebSocket.Server({ noServer: true, path: this.common.baseHref + '/api/ws', verifyClient: (process.env.NODE_ENV === 'development') ? null : verifyWSUser });
+    this.webSocketServer = new _WebSocketServer({ noServer: true, path: this.common.baseHref + '/api/ws', verifyClient: (process.env.NODE_ENV === 'development') ? null : verifyWSUser });
     httpServer.on('upgrade', (request, socket, head) => {
       if (request.headers['upgrade'] !== 'websocket') {
         socket.end('HTTP/1.1 400 Bad Request');
