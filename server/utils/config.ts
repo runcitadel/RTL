@@ -121,7 +121,6 @@ export class ConfigService {
         this.common.rtl_pass = this.common.replacePasswordWithHash(this.hash.update(config.multiPass).digest('hex'));
       } else if (process.env.APP_PASSWORD && process.env.APP_PASSWORD.trim() !== '') {
         this.common.rtl_pass = this.hash.update(process.env.APP_PASSWORD).digest('hex');
-        this.common.flg_allow_password_update = false;
       } else {
         this.errMsg = this.errMsg + '\nNode Authentication can be set with multiPass only. Please set multiPass in RTL-Config.json';
       }
