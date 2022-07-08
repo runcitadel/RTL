@@ -63,14 +63,14 @@ export class ExpressApplication {
     this.app.use(this.common.baseHref + '/api/cln', clnRoutes);
     this.app.use(this.common.baseHref + '/api/ecl', eclRoutes);
     this.app.use(this.common.baseHref, express.static(join(this.directoryName, '../..', 'frontend')));
-    this.app.use((req: any, res, next) => {
+    this.app.use((req: any, res) => {
       // For Angular App
       res.cookie('XSRF-TOKEN', req.csrfToken ? req.csrfToken() : '');
       // For JQuery Browser Plugin
       res.setHeader('XSRF-TOKEN', req.csrfToken ? req.csrfToken() : '');
       res.sendFile(join(this.directoryName, '../..', 'frontend', 'index.html'));
     });
-    this.app.use((err, req, res, next) => this.handleApplicationErrors(err, res));
+    this.app.use((err, req, res) => this.handleApplicationErrors(err, res));
     this.logger.log({ selectedNode: this.common.initSelectedNode, level: 'INFO', fileName: 'App', msg: 'Application Routes Set' });
   }
 
