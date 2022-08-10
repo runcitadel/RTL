@@ -8742,17 +8742,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ngx-perfect-scrollbar@npm:^10.1.1":
+"ngx-perfect-scrollbar-next@npm:^10.1.1":
   version: 10.1.1
-  resolution: "ngx-perfect-scrollbar@npm:10.1.1"
+  resolution: "ngx-perfect-scrollbar-next@npm:10.1.1"
   dependencies:
-    perfect-scrollbar: 1.5.0
-    resize-observer-polyfill: ^1.5.0
-    tslib: ^2.0.0
+    perfect-scrollbar: 1.5.5
+    resize-observer-polyfill: ^1.5.1
+    tslib: ^2.3.0
   peerDependencies:
     "@angular/common": ">=9.0.0"
     "@angular/core": ">=9.0.0"
-  checksum: 8756100abd697c3442e9c7be4ffb74c5bb39dfe704d8c2391d1a1522311c827dec87881895581d394b454d463db245c57806dc7e59abebcb21dec93fa6925a1b
+  checksum: 3d3aa52cd477ad5cb171381c9ba70c0f19ef98d49b85868b1e1007aaecb6bc0ed12411789e9f1a811a2d7828594ff97a9e46c984e2b27fbf186e2bcd8abf19b0
   languageName: node
   linkType: hard
 
@@ -9510,10 +9510,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"perfect-scrollbar@npm:1.5.0":
-  version: 1.5.0
-  resolution: "perfect-scrollbar@npm:1.5.0"
-  checksum: 896271b18a58cdb6dde4657212f17db5df01702b9959970681fddb8ca350dfa72e74b2631442a9715392f8ba39db70d28ad32f76f6314afa981f2d6931138c7d
+"perfect-scrollbar@npm:1.5.5":
+  version: 1.5.5
+  resolution: "perfect-scrollbar@npm:1.5.5"
+  checksum: 7a8d3097e91df1dd112f28ee9539c1a36ae7a836d986798af2e0d1e32c3ef21380215b3c06bc12434d89547d7f763637ac19b877549049b6c2166da85956c9dc
   languageName: node
   linkType: hard
 
@@ -10542,7 +10542,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resize-observer-polyfill@npm:^1.5.0":
+"resize-observer-polyfill@npm:^1.5.1":
   version: 1.5.1
   resolution: "resize-observer-polyfill@npm:1.5.1"
   checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
@@ -10757,7 +10757,7 @@ __metadata:
     karma-jasmine-html-reporter: ^2.0.0
     material-design-icons: ^3.0.1
     ng-qrcode: ^7.0.0
-    ngx-perfect-scrollbar: ^10.1.1
+    ngx-perfect-scrollbar-next: ^10.1.1
     nodemon: ~2.0.19
     otplib: ^12.0.1
     pdfmake: ^0.3.0-beta.2

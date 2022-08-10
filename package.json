@@ -80,7 +80,7 @@
     "karma-jasmine-html-reporter": "^2.0.0",
     "material-design-icons": "^3.0.1",
     "ng-qrcode": "^7.0.0",
-    "ngx-perfect-scrollbar": "^10.1.1",
+    "ngx-perfect-scrollbar-next": "^10.1.1",
     "nodemon": "~2.0.19",
     "pdfmake": "^0.3.0-beta.2",
     "protractor": "~7.0.0",
